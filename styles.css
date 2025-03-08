@@ -1,0 +1,157 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.row {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.container p {
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Row ที่ 1: Header */
+.header-row {
+  background-color: #f0f0f0;
+  /* padding: 20px 0; */
+  width: 100%;
+  border-bottom: 1px solid #4564ff75; /* เพิ่มเส้นขอบด้านล่าง */
+}
+
+.header-banner {
+  width: 100%; /* ทำให้แบนเนอร์เต็มความกว้างของ header */
+  display: block; /* ลบช่องว่างใต้ภาพ */
+}
+
+.header-row .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .header-row .logo, .header-row .atm-logo, .header-row .nxpo-logo, .header-row .pmu-b-logo {
+  max-height: 60px;
+} */
+
+/* Row ที่ 2: Description */
+.description-row {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.description-row .container {
+  max-width: 80%;
+}
+
+/* Row ที่ 3: Cards */
+.cards-row {
+  padding: 20px 0;
+}
+
+.cards-row .container {
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* ทำให้ card เรียงต่อกันเมื่อหน้าจอเล็กลง */
+}
+
+.feature {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  width: 220px; /* กำหนดความกว้างของ card */
+  background-color: #f7a5bf; /* เพิ่มสีพื้นหลังให้ card */
+  border-radius: 10px; /* เพิ่มขอบมนให้ card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม transition เพื่อให้เอฟเฟกต์เคลื่อนไหวอย่างนุ่มนวล */
+}
+
+.feature h3 {
+  color: #000000; /* กำหนดสีหัวข้อ */
+  font-size: 14px;
+}
+
+.feature p {
+  color: #000000; /* กำหนดสีข้อความ */
+  font-size: 12px;
+  text-align: left;
+}
+.feature a {
+  color: #007bff; /* กำหนดสีลิงก์ */
+  display: block;
+  text-align: right;
+  font-size: 12px;
+}
+
+.feature img {
+  width: 120px; /* กำหนดขนาดของรูปภาพ */
+  margin-bottom: 10px; /* กำหนดระยะห่างของรูปภาพกับข้อความ */
+}
+.feature a:hover {
+  text-decoration: none; /* ลบขีดเส้นใต้ลิงก์เมื่อเมาส์ชี้ */
+  color: rgb(28, 28, 27);
+}
+.feature:hover {
+    transform: translateY(-10px); /* เลื่อน card ขึ้นเล็กน้อย */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ card */
+}
+
+
+/* Row ที่ 4: Footer */
+.footer-row {
+  background-color: #d9d9d9;
+  color: black
+  padding: 20px 0;
+  text-align:left;
+  border-top: 0px solid #555; /* เพิ่มเส้นขอบด้านบน */
+}
+
+.footer-row h3 {
+  font-size: 12px;
+}
+
+.footer-row p {
+  font-size: 10px;
+}
+
+.footer-row footer {
+  padding: 10px;
+  margin: 0px;
+}
+
+/* ทำให้เว็บไซต์ตอบสนอง */
+@media (max-width: 768px) {
+  .header-row .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .header-row .logo, .header-row .atm-logo, .header-row .nxpo-logo, .header-row .pmu-b-logo {
+      margin: 10px 0;
+  }
+
+  .cards-row .container {
+      flex-direction: column; /* เปลี่ยน card ให้เรียงต่อกันในแนวตั้งเมื่อหน้าจอเล็กลง */
+      align-items: center;
+  }
+
+  .feature {
+      width: 90%; /* ขยาย card ให้เต็มความกว้างของ container เมื่อหน้าจอเล็กลง */
+  }
+}
