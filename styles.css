@@ -75,7 +75,7 @@ body {
   text-align: center;
   margin: 10px;
   width: 220px; /* กำหนดความกว้างของ card */
-  background-color: #f7a5bf; /* เพิ่มสีพื้นหลังให้ card */
+  background-color: #7f9eed; /* เพิ่มสีพื้นหลังให้ card */
   border-radius: 10px; /* เพิ่มขอบมนให้ card */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ card */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม transition เพื่อให้เอฟเฟกต์เคลื่อนไหวอย่างนุ่มนวล */
